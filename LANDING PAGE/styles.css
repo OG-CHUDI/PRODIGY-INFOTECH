@@ -1,0 +1,84 @@
+:root {
+    --primary-color: #201a23;
+    --secondary-color: #fffeec;
+    --tertiary-color: #574234;
+    --quaternary-color: #fff5e4;
+    --accent-color: #38323b;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#navbar {
+    background-color: var(--tertiary-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar li {
+    margin-right: 20px;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#navbar a:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+.toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 5px auto;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+#navbar.collapsed .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+#navbar.collapsed .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#navbar.collapsed .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+
+footer {
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+    padding: 20px 0;
+    text-align: center;
+}
